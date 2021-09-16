@@ -38,6 +38,11 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
+# Ims
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6889
