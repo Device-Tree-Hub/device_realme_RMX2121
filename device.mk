@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.mt6889:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6889
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.rmx2121
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6889.rc
