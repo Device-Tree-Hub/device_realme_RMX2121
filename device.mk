@@ -18,6 +18,11 @@ DEVICE_PATH := device/realme/RMX2121
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
