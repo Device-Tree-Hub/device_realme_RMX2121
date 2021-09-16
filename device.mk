@@ -67,3 +67,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6889.rc
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
