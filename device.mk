@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6889.rc
