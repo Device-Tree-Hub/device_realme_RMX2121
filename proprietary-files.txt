@@ -1,0 +1,22 @@
+# Device proprietary files - From sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 1612759478108 release-keys, unless pinned
+
+# APNs
+etc/apns-conf.xml:product/etc/apns-conf.xml
+
+# Bluetooth (AptX)
+lib64/libaptX_encoder.so
+lib64/libaptXHD_encoder.so
+
+# IMS - from phh.me
+-priv-app/ImsService/ImsService.apk
+
+# Engineering Mode
+-priv-app/EngineerMode/EngineerMode.apk
+lib/libem_support_jni.so
+lib64/libem_support_jni.so
+
+# Kernel Power Off Charging (KPOC)
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+
