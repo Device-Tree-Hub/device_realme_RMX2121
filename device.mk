@@ -19,6 +19,9 @@ DEVICE_PATH := device/realme/RMX2121
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Call proprietary blob setup
+$(call inherit-product-if-exists, vendor/realme/RMX2121/RMX2121-vendor.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Audio
