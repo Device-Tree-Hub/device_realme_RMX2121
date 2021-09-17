@@ -18,6 +18,15 @@ DEVICE_PATH := device/realme/RMX2121
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/audio_policy_configuration.xml \
+    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_configuration.xml
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
