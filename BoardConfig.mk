@@ -108,6 +108,9 @@ BOARD_MAIN_PARTITION_LIST := system product
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
