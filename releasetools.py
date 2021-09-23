@@ -21,6 +21,12 @@ def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
 
+def FullOTA_InstallBegin(info):
+  data = info.input_zip.read("RADIO/dynamic-remove-oppo")
+  common.ZipWriteStr(info.output_zip, "dynamic-remove-oppo", data)
+  info.script.AppendExtra('update_dynamic_partitions(package_extract_file("dynamic-remove-oppo"));')
+  return
+
 def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
@@ -35,4 +41,3 @@ def OTA_InstallEnd(info):
   info.script.Print("Patching firmware images...")
   AddImage(info, "vbmeta.img", "/dev/block/platform/bootdevice/by-name/vbmeta")
   return
-  
