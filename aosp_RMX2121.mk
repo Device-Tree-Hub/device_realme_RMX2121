@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelExperience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from device
 $(call inherit-product, device/realme/RMX2121/device.mk)
@@ -31,11 +31,14 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := RMX2121
 
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := lineage_RMX2121
+PRODUCT_NAME := aosp_RMX2121
 PRODUCT_DEVICE := RMX2121
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
