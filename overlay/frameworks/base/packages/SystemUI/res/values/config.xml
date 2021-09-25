@@ -25,4 +25,7 @@
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
     <dimen name="config_rounded_mask_size_bottom">118px</dimen>
 
+    <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
+    <bool name="doze_suspend_display_state_supported">true</bool>
+
 </resources>
