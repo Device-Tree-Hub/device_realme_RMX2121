@@ -36,6 +36,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/a2dp_audio_policy_configuration.xml \
     $(DEVICE_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_ODM)/etc/a2dp_audio_policy_configuration.xml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
