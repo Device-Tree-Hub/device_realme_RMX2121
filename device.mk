@@ -104,6 +104,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
+# RcsService
+PRODUCT_PACKAGES += \
+    RcsService
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6889.rc
