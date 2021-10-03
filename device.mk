@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
     mtk-ims \
     mtk-ims-telephony
 
+# ImsInit
+PRODUCT_PACKAGES += \
+    ImsInit
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6889.rc \
