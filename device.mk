@@ -108,6 +108,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     RcsService
 
+# RRO
+PRODUCT_PACKAGES += \
+    CutoutOverlaySystem \
+    CutoutOverlaySystemUI
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6889.rc
