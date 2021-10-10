@@ -1,0 +1,2 @@
+# CPU info
+allow platform_app sysfs_cpuinfo:file rw_file_perms;

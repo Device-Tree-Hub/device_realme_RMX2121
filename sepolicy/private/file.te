@@ -7,3 +7,6 @@ type proc_ppm, fs_type, proc_type;
 type sysfs_battery_supply, sysfs_type, fs_type;
 type sysfs_fps, sysfs_type, fs_type;
 type sysfs_ged, sysfs_type, fs_type;
+
+# CPU info
+type sysfs_cpuinfo, sysfs_type, fs_type;
