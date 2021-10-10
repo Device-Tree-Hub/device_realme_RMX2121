@@ -10,3 +10,6 @@ type sysfs_ged, sysfs_type, fs_type;
 
 # CPU info
 type sysfs_cpuinfo, sysfs_type, fs_type;
+
+# System info
+type sysfs_kgsl, sysfs_type, fs_type;

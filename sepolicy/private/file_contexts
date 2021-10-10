@@ -21,3 +21,6 @@
 
 # CPU info
 /sys/class/thermal/thermal_zone3/temp      u:object_r:sysfs_cpuinfo:s0
+
+# VOOC
+/sys/class/power_supply/battery/voocchg_ing     u:object_r:sysfs_battery_supply:s0
