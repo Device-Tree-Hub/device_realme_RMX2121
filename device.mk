@@ -126,7 +126,9 @@ PRODUCT_PACKAGES += \
 # RRO
 PRODUCT_PACKAGES += \
     CutoutOverlaySystem \
-    CutoutOverlaySystemUI
+    CutoutOverlaySystemUI \
+    DozeOverlaySystem \
+    DozeOverlaySystemUI
 
 # Recovery
 PRODUCT_PACKAGES += \
