@@ -19,4 +19,11 @@
     <string name="advanced_settings">Realme Parts</string>
     <string name="advanced_settings_summary">Device Specific Customisations</string>
 
+    <!-- Gestures -->
+    <string name="gestures_title">Gestures</string>
+    
+    <!-- DT2W -->
+    <string name="dt2w_title">Double-Tap to wake</string>
+    <string name="dt2w_summary">When Double-tap to wake is enabled, you can touch the screen twice to turn it on</string>
+
 </resources>

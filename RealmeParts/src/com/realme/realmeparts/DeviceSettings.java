@@ -25,6 +25,7 @@ import android.os.Handler;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
+import androidx.preference.TwoStatePreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import android.content.Context;
@@ -37,6 +38,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String TAG = "RealmeParts";
 
+    public static final String KEY_DT2W_SWITCH = "dt2w";
+
+    private static TwoStatePreference mDT2WModeSwitch;
+
     private static Context mContext;
 
     @Override
@@ -46,6 +51,11 @@ public class DeviceSettings extends PreferenceFragment implements
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
 
         String device = FileUtils.getStringProp("ro.build.product", "unknown");
+
+        mDT2WModeSwitch = (TwoStatePreference) findPreference(KEY_DT2W_SWITCH);
+        mDT2WModeSwitch.setEnabled(DT2WModeSwitch.isSupported());
+        mDT2WModeSwitch.setChecked(DT2WModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mDT2WModeSwitch.setOnPreferenceChangeListener(new DT2WModeSwitch());
     }
 
     @Override
