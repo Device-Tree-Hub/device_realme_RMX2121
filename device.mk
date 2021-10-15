@@ -136,6 +136,10 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     RcsService
 
+# Realme Parts
+PRODUCT_PACKAGES += \
+    RealmeParts
+
 # RRO
 PRODUCT_PACKAGES += \
     CutoutOverlaySystem \
