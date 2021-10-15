@@ -114,6 +114,11 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-hal-st.conf \
+    $(DEVICE_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    $(DEVICE_PATH)/nfc/libnfc-st21h_conf.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-st21h_conf.txt
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
