@@ -1125,4 +1125,7 @@
     <integer name="config_sysCPUTempMultiplier">10</integer>
     <integer name="config_sysBatteryTempMultiplier">10</integer>
 
+    <!-- Whether device has SuperDart charging support -->
+    <bool name="config_hasSuperdartCharger">true</bool>
+
 </resources>
