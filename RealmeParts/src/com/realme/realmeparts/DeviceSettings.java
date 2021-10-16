@@ -33,14 +33,18 @@ import android.content.SharedPreferences;
 
 import java.lang.Math.*;
 
+import com.realme.realmeparts.preferences.VibratorStrengthPreference;
+
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "RealmeParts";
 
     public static final String KEY_DT2W_SWITCH = "dt2w";
+    public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static TwoStatePreference mDT2WModeSwitch;
+    private VibratorStrengthPreference mVibratorStrength;
 
     private static Context mContext;
 
@@ -56,6 +60,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mDT2WModeSwitch.setEnabled(DT2WModeSwitch.isSupported());
         mDT2WModeSwitch.setChecked(DT2WModeSwitch.isCurrentlyEnabled(this.getContext()));
         mDT2WModeSwitch.setOnPreferenceChangeListener(new DT2WModeSwitch());
+
+        mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
+        if (mVibratorStrength != null) {
+            mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
+        }
     }
 
     @Override

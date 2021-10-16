@@ -26,4 +26,15 @@
     <string name="dt2w_title">Double-Tap to wake</string>
     <string name="dt2w_summary">When Double-tap to wake is enabled, you can touch the screen twice to turn it on</string>
 
+    <!-- Vibration Slider -->
+    <string name="vibrator_intensity">Vibration</string>
+    <string name="vibrator_intensity_control">Intensity</string>
+    <string name="vibrator_intensity_summary">Allows user to change the vibration intensity</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
 </resources>

@@ -26,6 +26,8 @@ import com.realme.realmeparts.R;
 
 import java.lang.Math.*;
 
+import com.realme.realmeparts.preferences.VibratorStrengthPreference;
+
 public class BootReceiver extends BroadcastReceiver {
 
     public void onReceive(Context context, Intent intent) {
@@ -35,6 +37,9 @@ public class BootReceiver extends BroadcastReceiver {
         boolean enabled = false;
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DT2W_SWITCH, false);
         restore(DT2WModeSwitch.getFile(), enabled);
+
+        // System
+        VibratorStrengthPreference.restore(context);
     }
 
     private void restore(String file, boolean enabled) {
