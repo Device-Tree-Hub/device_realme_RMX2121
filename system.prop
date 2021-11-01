@@ -14,6 +14,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
     persist.sys.sf.disable_blurs=1
 
+# Encryption
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.dm_default_key.options_format.version=2 \
+    ro.crypto.volume.filenames_mode=aes-256-cts \
+    ro.crypto.volume.metadata.method=dm-default-key \
+    ro.crypto.volume.options=::v2
+
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
