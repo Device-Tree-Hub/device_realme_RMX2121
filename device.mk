@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2021 The LineageOS Project
 #
@@ -56,7 +57,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.rmx2121 \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.RMX2121
+    lineage.biometrics.fingerprint.inscreen@1.0-service.RMX2121 \
+    vendor.oppo.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
