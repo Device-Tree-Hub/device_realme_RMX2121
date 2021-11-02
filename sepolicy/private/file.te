@@ -14,3 +14,7 @@ type sysfs_cpuinfo, sysfs_type, fs_type;
 
 # System info
 type sysfs_kgsl, sysfs_type, fs_type;
+
+# FOD
+type sysfs_fod, sysfs_type, fs_type;
+type sysfs_fingerprint_notify, sysfs_type, fs_type;
