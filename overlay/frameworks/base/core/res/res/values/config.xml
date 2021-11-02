@@ -1133,4 +1133,7 @@
     <string name="config_adaptiveChargingSuspendValue" translatable="false">0</string>
     <string name="config_adaptiveChargingResumeValue" translatable="false">1</string>
 
+    <!-- Shows the required view for in-display fingerprint -->
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
+
 </resources>
