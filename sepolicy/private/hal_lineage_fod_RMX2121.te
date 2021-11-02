@@ -20,4 +20,4 @@ wakelock_use(hal_lineage_fod_RMX2121)
 allow hal_lineage_fod_RMX2121 sysfs:file { open write };
 
 # Allow sysfs fingerprint notify file to open and write
-allow hal_lineage_fod_RMX2121 sysfs_fingerprint_notify:file { open write };
+allow hal_lineage_fod_RMX2121 sysfs_fingerprint_notify:file { open write getattr};
