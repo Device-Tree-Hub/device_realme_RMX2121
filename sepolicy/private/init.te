@@ -21,3 +21,6 @@ allow init socket_device:sock_file create_file_perms;
 
 # Allow init to write /proc/fastchg_fw_update
 allow init proc_fastchg_fw:file rw_file_perms;
+
+# RealmeParts
+allow init sysfs_graphics_ffl:file { rw_file_perms setattr };

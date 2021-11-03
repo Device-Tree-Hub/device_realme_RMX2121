@@ -25,3 +25,7 @@
 
 # VOOC
 /sys/class/power_supply/battery/voocchg_ing     u:object_r:sysfs_battery_supply:s0
+
+# RealmeParts
+/sys/kernel/oppo_display/hbm    u:object_r:sysfs_disp_hbm:s0
+/sys/kernel/oppo_display/seed    u:object_r:sysfs_graphics_ffl:s0
