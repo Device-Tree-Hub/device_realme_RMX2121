@@ -42,10 +42,16 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String KEY_DT2W_SWITCH = "dt2w";
     public static final String KEY_OTG_SWITCH = "otg";
+    public static final String KEY_SRGB_SWITCH = "srgb";
+    public static final String KEY_HBM_SWITCH = "hbm";
+    public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static TwoStatePreference mDT2WModeSwitch;
     private static TwoStatePreference mOTGModeSwitch;
+    private static TwoStatePreference mHBMModeSwitch;
+    private static TwoStatePreference mDCModeSwitch;
+    private static TwoStatePreference mSRGBModeSwitch;
     private VibratorStrengthPreference mVibratorStrength;
 
     private static Context mContext;
@@ -67,6 +73,21 @@ public class DeviceSettings extends PreferenceFragment implements
         mOTGModeSwitch.setEnabled(OTGModeSwitch.isSupported());
         mOTGModeSwitch.setChecked(OTGModeSwitch.isCurrentlyEnabled(this.getContext()));
         mOTGModeSwitch.setOnPreferenceChangeListener(new OTGModeSwitch());
+
+        mDCModeSwitch = (TwoStatePreference) findPreference(KEY_DC_SWITCH);
+        mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
+        mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
+
+        mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
+        mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
+        mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
+
+        mSRGBModeSwitch = (TwoStatePreference) findPreference(KEY_SRGB_SWITCH);
+        mSRGBModeSwitch.setEnabled(SRGBModeSwitch.isSupported());
+        mSRGBModeSwitch.setChecked(SRGBModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mSRGBModeSwitch.setOnPreferenceChangeListener(new SRGBModeSwitch());
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {
