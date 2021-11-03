@@ -41,9 +41,11 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TAG = "RealmeParts";
 
     public static final String KEY_DT2W_SWITCH = "dt2w";
+    public static final String KEY_OTG_SWITCH = "otg";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static TwoStatePreference mDT2WModeSwitch;
+    private static TwoStatePreference mOTGModeSwitch;
     private VibratorStrengthPreference mVibratorStrength;
 
     private static Context mContext;
@@ -60,6 +62,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mDT2WModeSwitch.setEnabled(DT2WModeSwitch.isSupported());
         mDT2WModeSwitch.setChecked(DT2WModeSwitch.isCurrentlyEnabled(this.getContext()));
         mDT2WModeSwitch.setOnPreferenceChangeListener(new DT2WModeSwitch());
+
+        mOTGModeSwitch = (TwoStatePreference) findPreference(KEY_OTG_SWITCH);
+        mOTGModeSwitch.setEnabled(OTGModeSwitch.isSupported());
+        mOTGModeSwitch.setChecked(OTGModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mOTGModeSwitch.setOnPreferenceChangeListener(new OTGModeSwitch());
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {

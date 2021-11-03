@@ -1,5 +1,6 @@
 import /system/etc/init/init.ago.rc
 import /system/etc/init/hw/init.realme.rc
+import /system/etc/init/hw/init.realmeparts.rc
 
 on early-init 
      start adbd

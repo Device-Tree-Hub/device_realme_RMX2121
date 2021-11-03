@@ -87,6 +87,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mt6889.rc \
     init.realme.rc \
+    init.realmeparts.rc \
     fstab.mt6889
 
 PRODUCT_COPY_FILES += \
