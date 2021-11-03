@@ -3,3 +3,5 @@ type hal_fingerprint_oppo_exec, system_file_type, exec_type, file_type;
 
 allow hal_fingerprint_oppo proc_tp:dir search;
 allow hal_fingerprint_oppo proc_tp:file { open write };
+
+allow hal_fingerprint_oppo default_android_hwservice:hwservice_manager find;
