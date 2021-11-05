@@ -24,19 +24,8 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Inherit from device
 $(call inherit-product, device/realme/RMX2121/device.mk)
 
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Asserts
-TARGET_OTA_ASSERT_DEVICE := RMX2121
-
 # Gapps
 TARGET_GAPPS_ARCH := arm64
-
-# Boot Animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_NAME := aosp_RMX2121
 PRODUCT_DEVICE := RMX2121
