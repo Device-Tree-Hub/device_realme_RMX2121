@@ -103,10 +103,12 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
+    set(DIMLAYER_PATH, FP_BEGIN);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
+    set(DIMLAYER_PATH, FP_ENDIT);
     return Void();
 }
 
