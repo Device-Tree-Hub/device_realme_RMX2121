@@ -38,3 +38,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.nfc.aid_overflow=true \
     ro.product.cuptsm=OPPO|ESE|01|02 \
     persist.sys.nfc.antenna_area=bottom
+
+# Zygote
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
