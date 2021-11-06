@@ -44,37 +44,44 @@
 
         <SwitchPreference
             android:key="otg"
+            android:icon="@drawable/ic_otg_tile"
             android:summary="@string/otg_mode_summary"
             android:title="@string/otg_mode_title" />
 
         <SwitchPreference
             android:key="dc"
+            android:icon="@drawable/ic_dc_tile"
             android:summary="@string/dc_mode_summary"
             android:title="@string/dc_mode_title" />
 
         <SwitchPreference
             android:key="hbm"
+            android:icon="@drawable/ic_hbm_tile"
             android:summary="@string/hbm_mode_summary"
             android:title="@string/hbm_mode_title"
             android:defaultValue="false" />
 
         <SwitchPreference
             android:key="srgb"
+            android:icon="@drawable/ic_srgb_tile"
             android:summary="@string/srgb_mode_summary"
             android:title="@string/srgb_mode_title" />
 
         <SwitchPreference
             android:key="game"
+            android:icon="@drawable/ic_game_tile"
             android:summary="@string/game_mode_summary"
             android:title="@string/game_mode_title" />
 
         <SwitchPreference
             android:key="smooth"
+            android:icon="@drawable/ic_smooth"
             android:summary="@string/smooth_scroll_summary"
             android:title="@string/smooth_scroll_title" />
 
         <SwitchPreference
             android:key="sensitive"
+            android:icon="@drawable/ic_sensitive"
             android:summary="@string/sensitive_level_summary"
             android:title="@string/sensitive_level_title" />
 
@@ -85,6 +92,7 @@
 
         <SwitchPreference
             android:key="super_dart"
+            android:icon="@drawable/ic_power"
             android:summary="@string/super_dart_summary"
             android:title="@string/super_dart_title" />
 
