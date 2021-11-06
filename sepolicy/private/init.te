@@ -24,3 +24,6 @@ allow init proc_fastchg_fw:file rw_file_perms;
 
 # RealmeParts
 allow init sysfs_graphics_ffl:file { rw_file_perms setattr };
+
+# FOD
+allow init sysfs_fod:file { rw_file_perms setattr };
