@@ -29,3 +29,4 @@
 # RealmeParts
 /sys/kernel/oppo_display/hbm    u:object_r:sysfs_disp_hbm:s0
 /sys/kernel/oppo_display/seed    u:object_r:sysfs_graphics_ffl:s0
+/sys/class/leds/vibrator/max_brightness    u:object_r:sysfs_vib:s0

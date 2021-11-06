@@ -30,3 +30,4 @@ allow system_app sysfs_graphics_ffl:file rw_file_perms;
 allow system_app sysfs_disp_hbm:file rw_file_perms;
 allow system_app proc_fastchg_fw:dir search;
 allow system_app proc_fastchg_fw:file rw_file_perms;
+allow system_app sysfs_vib:file rw_file_perms;

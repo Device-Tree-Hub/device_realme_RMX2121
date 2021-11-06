@@ -9,6 +9,7 @@ on boot
     chown system system /proc/fastchg_fw_update
     chown system system /proc/touchpanel/smooth_level
     chown system system /proc/touchpanel/sensitive_level
+    chown system system /sys/class/leds/vibrator/max_brightness
 
     chmod 0666 /sys/class/power_supply/usb/otg_switch
     chmod 0666 /sys/kernel/oppo_display/dimlayer_bl_en
@@ -20,3 +21,4 @@ on boot
     chmod 0666 /proc/fastchg_fw_update
     chmod 0666 /proc/touchpanel/smooth_level
     chmod 0666 /proc/touchpanel/sensitive_level
+    chmod 0666 /sys/class/leds/vibrator/max_brightness

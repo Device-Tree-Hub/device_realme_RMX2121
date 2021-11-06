@@ -22,3 +22,4 @@ type sysfs_fingerprint_notify, sysfs_type, fs_type;
 # RealmeParts
 type sysfs_graphics_ffl, sysfs_type, fs_type;
 type sysfs_disp_hbm, sysfs_type, fs_type;
+type sysfs_vib, sysfs_type, fs_type;
