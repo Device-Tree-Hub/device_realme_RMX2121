@@ -51,6 +51,10 @@ public class BootReceiver extends BroadcastReceiver {
         restore(SRGBModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.SUPER_DART_SWITCH, false);
         restore(SuperDartSwitch.getFile(), enabled);
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SMOOTH, false);
+        restore(SmoothSwitch.getFile(), enabled);
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SENSITIVE, false);
+        restore(SensitiveSwitch.getFile(), enabled);
 
         // System
         VibratorStrengthPreference.restore(context);

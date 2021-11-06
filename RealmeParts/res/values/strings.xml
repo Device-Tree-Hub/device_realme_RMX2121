@@ -69,4 +69,10 @@
     <string name="tile_super_dart">SuperDart</string>
     <string name="power_title">Power</string>
 
+    <!-- Scrolling -->
+    <string name="smooth_scroll_title">Smooth Scrolling</string>
+    <string name="smooth_scroll_summary">Allow device to scroll smoothly</string>
+    <string name="sensitive_level_title">Sensitivity</string>
+    <string name="sensitive_level_summary">Improves touch sensitivity</string>
+
 </resources>
