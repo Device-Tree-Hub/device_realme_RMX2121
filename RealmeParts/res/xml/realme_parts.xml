@@ -70,4 +70,14 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/power_title">
+
+        <SwitchPreference
+            android:key="super_dart"
+            android:summary="@string/super_dart_summary"
+            android:title="@string/super_dart_title" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

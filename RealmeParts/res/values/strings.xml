@@ -63,4 +63,10 @@
     <string name="game_mode_title">Game Mode</string>
     <string name="tile_game_mode">Game Mode</string>
 
+    <!-- Superdart Charging -->
+    <string name="super_dart_title">SuperDart Charging</string>
+    <string name="super_dart_summary">If enabled, device charges at a rate of 65W</string>
+    <string name="tile_super_dart">SuperDart</string>
+    <string name="power_title">Power</string>
+
 </resources>

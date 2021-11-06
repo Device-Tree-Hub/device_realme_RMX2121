@@ -48,6 +48,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_GAME_SWITCH = "game";
     public static final String TP_LIMIT_ENABLE = "/proc/touchpanel/oplus_tp_limit_enable";
     public static final String TP_DIRECTION = "/proc/touchpanel/oplus_tp_direction";
+    public static final String SUPER_DART_SWITCH = "super_dart";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static TwoStatePreference mDT2WModeSwitch;
@@ -56,6 +57,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mSRGBModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
+    private static TwoStatePreference mSuperDartSwitch;
     private VibratorStrengthPreference mVibratorStrength;
 
     private static Context mContext;
@@ -97,6 +99,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
         mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
         mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
+
+        mSuperDartSwitch = (TwoStatePreference) findPreference(SUPER_DART_SWITCH);
+        mSuperDartSwitch.setEnabled(SuperDartSwitch.isSupported());
+        mSuperDartSwitch.setChecked(SuperDartSwitch.isCurrentlyEnabled(this.getContext()));
+        mSuperDartSwitch.setOnPreferenceChangeListener(new SuperDartSwitch());
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {

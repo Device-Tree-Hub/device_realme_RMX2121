@@ -129,5 +129,16 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name="com.realme.realmeparts.SuperDartChargeTileService"
+            android:icon="@drawable/ic_power"
+            android:label="@string/tile_super_dart"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
     </application>
 </manifest>
