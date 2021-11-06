@@ -45,6 +45,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_DC_SWITCH = "dc";
+    public static final String KEY_GAME_SWITCH = "game";
+    public static final String TP_LIMIT_ENABLE = "/proc/touchpanel/oplus_tp_limit_enable";
+    public static final String TP_DIRECTION = "/proc/touchpanel/oplus_tp_direction";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static TwoStatePreference mDT2WModeSwitch;
@@ -52,6 +55,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mSRGBModeSwitch;
+    private static TwoStatePreference mGameModeSwitch;
     private VibratorStrengthPreference mVibratorStrength;
 
     private static Context mContext;
@@ -88,6 +92,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mSRGBModeSwitch.setEnabled(SRGBModeSwitch.isSupported());
         mSRGBModeSwitch.setChecked(SRGBModeSwitch.isCurrentlyEnabled(this.getContext()));
         mSRGBModeSwitch.setOnPreferenceChangeListener(new SRGBModeSwitch());
+
+        mGameModeSwitch = (TwoStatePreference) findPreference(KEY_GAME_SWITCH);
+        mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
+        mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {

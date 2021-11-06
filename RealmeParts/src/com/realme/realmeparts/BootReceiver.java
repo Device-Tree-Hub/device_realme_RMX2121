@@ -21,6 +21,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
+import com.realme.realmeparts.DeviceSettings;
+import com.realme.realmeparts.*;
 import android.provider.Settings;
 import com.realme.realmeparts.R;
 
@@ -35,6 +37,8 @@ public class BootReceiver extends BroadcastReceiver {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         boolean enabled = false;
+        enabled = sharedPrefs.getBoolean (DeviceSettings.KEY_GAME_SWITCH, false);
+        restore (GameModeSwitch.getFile ( ), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DT2W_SWITCH, false);
         restore(DT2WModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_OTG_SWITCH, false);

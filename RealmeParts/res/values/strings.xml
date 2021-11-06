@@ -58,4 +58,9 @@
     <string name="srgb_mode_title">sRGB mode</string>
     <string name="tile_srgb_mode">sRGB</string>
 
+    <!-- game mode -->
+    <string name="game_mode_summary">Boost Touch Sampling Rate</string>
+    <string name="game_mode_title">Game Mode</string>
+    <string name="tile_game_mode">Game Mode</string>
+
 </resources>
