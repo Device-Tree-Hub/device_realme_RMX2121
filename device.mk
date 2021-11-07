@@ -73,6 +73,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.nfc_extras.xml
 
+# FOD
+TARGET_HAS_FOD := true
+EXTRA_FOD_ANIMATIONS := true
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
