@@ -44,6 +44,10 @@ on property:sys.boot_completed=1
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
 
+    # Touchpanel
+    write /proc/touchpanel/oplus_tp_limit_enable 0
+    write /proc/touchpanel/oplus_tp_direction 1
+
 service prop-adap-core-gsi /odm/bin/self-init gsicore
     class core
     user root
