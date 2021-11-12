@@ -21,3 +21,9 @@ allow hal_lineage_fod_RMX2121 sysfs:file { open write };
 
 # Allow sysfs fingerprint notify file to open and write
 allow hal_lineage_fod_RMX2121 sysfs_fingerprint_notify:file { open write getattr};
+
+# Allow sysfs aod light mode file to open and write
+allow hal_lineage_fod_RMX2121 sysfs_aod_mode:file { open write getattr};
+
+# Allow sysfs panel pwr file to open and write
+allow hal_lineage_fod_RMX2121 sysfs_panel_pwr:file { open write getattr};

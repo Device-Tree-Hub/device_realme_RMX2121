@@ -26,27 +26,30 @@
 /* Hardcoded stuffs */
 #define FP_PRESS_PATH "/sys/kernel/oppo_display/oppo_notify_fppress"
 #define DIMLAYER_PATH "/sys/kernel/oppo_display/dimlayer_bl_en"
-#define X_POS 453
-#define Y_POS 1823
-#define FP_SIZE 174
+#define AOD_PATH "/sys/kernel/oppo_display/aod_light_mode_set"
+#define POWER_STATUS_PATH "/sys/kernel/oppo_display/panel_pwr"
+#define X_POS 445
+#define Y_POS 1805
+#define FP_SIZE 190
 #define FP_BEGIN 1
 #define FP_ENDIT 0
 
 namespace {
 
 template <typename T>
-static inline void set(const std::string& path, const T& value) {
+static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
-    //LOG(INFO) << "wrote path: " << path << ", value: " << value << "\n";
+    LOG(INFO) << "wrote path: " << path << ", value: " << value << "\n";
 }
 
 template <typename T>
-static inline T get(const std::string& path, const T& def) {
+static T get(const std::string& path, const T& def) {
     std::ifstream file(path);
     T result;
 
     file >> result;
+    LOG(INFO) << "read path: " << path << ", value: " << result << "\n";
     return file.fail() ? def : result;
 }
 
@@ -60,7 +63,7 @@ namespace inscreen {
 namespace V1_0 {
 namespace implementation {
 
-FingerprintInscreen::FingerprintInscreen():isDreamState{false} {
+FingerprintInscreen::FingerprintInscreen() {
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
@@ -84,36 +87,23 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
-    if(isDreamState) {
-       set(DIMLAYER_PATH, FP_BEGIN);
-       std::thread([this]() {
-           std::this_thread::sleep_for(std::chrono::milliseconds(60));
-           if (isDreamState) {
-               set(FP_PRESS_PATH, FP_BEGIN);
-           }
-       }).detach();
-       } else {
-         set(FP_PRESS_PATH, FP_BEGIN);
-       }
+    set(DIMLAYER_PATH, FP_BEGIN);
+    set(FP_PRESS_PATH, FP_BEGIN);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    if (isDreamState)
-       set(FP_PRESS_PATH, FP_ENDIT);
-       set(DIMLAYER_PATH, FP_ENDIT);
+    set(FP_PRESS_PATH, FP_ENDIT);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
-    isDreamState = false;
     set(DIMLAYER_PATH, FP_BEGIN);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
-    if(!isDreamState)
-       set(DIMLAYER_PATH, FP_ENDIT);
+    set(DIMLAYER_PATH, FP_ENDIT);
     return Void();
 }
 
@@ -135,6 +125,10 @@ Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
 
 Return<bool> FingerprintInscreen::shouldBoostBrightness() {
     return false;
+}
+
+Return<bool> FingerprintInscreen::isDozeMode() {
+    return (get(POWER_STATUS_PATH, 0) == 1) || (get(POWER_STATUS_PATH, 0) == 3);
 }
 
 Return<void> FingerprintInscreen::setCallback(const sp<::vendor::lineage::biometrics::fingerprint::inscreen::V1_0::IFingerprintInscreenCallback>& callback) {

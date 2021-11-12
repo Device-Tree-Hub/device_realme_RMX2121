@@ -16,6 +16,8 @@
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.RMX2121                           u:object_r:hal_lineage_fod_RMX2121_exec:s0
 /sys/kernel/oppo_display/oppo_notify_fppress     u:object_r:sysfs_fingerprint_notify:s0
 /sys/kernel/oppo_display/dimlayer_bl_en           u:object_r:sysfs_fod:s0
+/sys/kernel/oppo_display/aod_light_mode_set    u:object_r:sysfs_aod_mode:s0
+/sys/kernel/oppo_display/panel_pwr    u:object_r:sysfs_panel_pwr:s0
 
 # Misc
 /system/bin/perf_profile\.sh	u:object_r:perf_profile_exec:s0
