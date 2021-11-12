@@ -142,7 +142,9 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # RcsService
 PRODUCT_PACKAGES += \
-    RcsService
+    com.android.ims.rcsmanager \
+    RcsService \
+    PresencePolling
 
 # Realme Parts
 PRODUCT_PACKAGES += \
