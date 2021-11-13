@@ -160,6 +160,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+# Symbols
+PRODUCT_PACKAGES += \
+    libshim_vtservice
+
 # Telephony
 PRODUCT_BOOT_JARS += \
     mediatek-common \
@@ -169,6 +173,9 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
+
+PRODUCT_PACKAGES += \
+    ImsServiceBase
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
