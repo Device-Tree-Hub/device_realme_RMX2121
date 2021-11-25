@@ -64,7 +64,7 @@
         </activity>
 
         <service
-            android:name="com.realme.realmeparts.DT2WTileService"
+            android:name="com.realme.realmeparts.services.DT2WTileService"
             android:icon="@drawable/ic_dt2w"
             android:label="@string/dt2w_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -75,7 +75,7 @@
         </service>
 
         <service
-            android:name="com.realme.realmeparts.OtgToggleService"
+            android:name="com.realme.realmeparts.services.OtgToggleService"
             android:icon="@drawable/ic_otg_tile"
             android:label="@string/tile_otg_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -86,7 +86,7 @@
         </service>
 
         <service
-            android:name="com.realme.realmeparts.DCModeTileService"
+            android:name="com.realme.realmeparts.services.DCModeTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -97,7 +97,7 @@
         </service>
 
         <service
-            android:name="com.realme.realmeparts.HBMModeTileService"
+            android:name="com.realme.realmeparts.services.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -108,7 +108,7 @@
         </service>
 
         <service
-            android:name="com.realme.realmeparts.SRGBModeTileService"
+            android:name="com.realme.realmeparts.services.SRGBModeTileService"
             android:icon="@drawable/ic_srgb_tile"
             android:label="@string/tile_srgb_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -119,20 +119,9 @@
         </service>
 
         <service
-            android:name="com.realme.realmeparts.GameModeTileService"
+            android:name="com.realme.realmeparts.services.GameModeTileService"
             android:icon="@drawable/ic_game_tile"
             android:label="@string/tile_game_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <service
-            android:name="com.realme.realmeparts.SuperDartChargeTileService"
-            android:icon="@drawable/ic_power"
-            android:label="@string/tile_super_dart"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action

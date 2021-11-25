@@ -28,8 +28,6 @@ import com.realme.realmeparts.R;
 
 import java.lang.Math.*;
 
-import com.realme.realmeparts.preferences.VibratorStrengthPreference;
-
 public class BootReceiver extends BroadcastReceiver {
 
     public void onReceive(Context context, Intent intent) {
@@ -49,15 +47,6 @@ public class BootReceiver extends BroadcastReceiver {
         restore(HBMModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SRGB_SWITCH, false);
         restore(SRGBModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(DeviceSettings.SUPER_DART_SWITCH, false);
-        restore(SuperDartSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SMOOTH, false);
-        restore(SmoothSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SENSITIVE, false);
-        restore(SensitiveSwitch.getFile(), enabled);
-
-        // System
-        VibratorStrengthPreference.restore(context);
     }
 
     private void restore(String file, boolean enabled) {

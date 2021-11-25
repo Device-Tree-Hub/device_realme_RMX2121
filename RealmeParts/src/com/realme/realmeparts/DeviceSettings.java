@@ -33,8 +33,6 @@ import android.content.SharedPreferences;
 
 import java.lang.Math.*;
 
-import com.realme.realmeparts.preferences.VibratorStrengthPreference;
-
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
@@ -48,10 +46,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_GAME_SWITCH = "game";
     public static final String TP_LIMIT_ENABLE = "/proc/touchpanel/oplus_tp_limit_enable";
     public static final String TP_DIRECTION = "/proc/touchpanel/oplus_tp_direction";
-    public static final String SUPER_DART_SWITCH = "super_dart";
-    public static final String KEY_SMOOTH = "smooth";
-    public static final String KEY_SENSITIVE = "sensitive";
-    public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static TwoStatePreference mDT2WModeSwitch;
     private static TwoStatePreference mOTGModeSwitch;
@@ -59,10 +53,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static TwoStatePreference mDCModeSwitch;
     private static TwoStatePreference mSRGBModeSwitch;
     private static TwoStatePreference mGameModeSwitch;
-    private static TwoStatePreference mSuperDartSwitch;
-    private static TwoStatePreference mSmoothSwitch;
-    private static TwoStatePreference mSensitiveSwitch;
-    private VibratorStrengthPreference mVibratorStrength;
 
     private static Context mContext;
 
@@ -103,26 +93,6 @@ public class DeviceSettings extends PreferenceFragment implements
         mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
         mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
         mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
-
-        mSuperDartSwitch = (TwoStatePreference) findPreference(SUPER_DART_SWITCH);
-        mSuperDartSwitch.setEnabled(SuperDartSwitch.isSupported());
-        mSuperDartSwitch.setChecked(SuperDartSwitch.isCurrentlyEnabled(this.getContext()));
-        mSuperDartSwitch.setOnPreferenceChangeListener(new SuperDartSwitch());
-
-        mSmoothSwitch = (TwoStatePreference) findPreference(KEY_SMOOTH);
-        mSmoothSwitch.setEnabled(SmoothSwitch.isSupported());
-        mSmoothSwitch.setChecked(SmoothSwitch.isCurrentlyEnabled(this.getContext()));
-        mSmoothSwitch.setOnPreferenceChangeListener(new SmoothSwitch());
-
-        mSensitiveSwitch = (TwoStatePreference) findPreference(KEY_SENSITIVE);
-        mSensitiveSwitch.setEnabled(SensitiveSwitch.isSupported());
-        mSensitiveSwitch.setChecked(SensitiveSwitch.isCurrentlyEnabled(this.getContext()));
-        mSensitiveSwitch.setOnPreferenceChangeListener(new SensitiveSwitch());
-
-        mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
-        if (mVibratorStrength != null) {
-            mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
-        }
     }
 
     @Override
@@ -141,4 +111,3 @@ public class DeviceSettings extends PreferenceFragment implements
         }
     }
 }
-

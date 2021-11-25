@@ -26,11 +26,6 @@
     <string name="dt2w_title">Double-Tap to wake</string>
     <string name="dt2w_summary">When Double-tap to wake is enabled, you can touch the screen twice to turn it on</string>
 
-    <!-- Vibration Slider -->
-    <string name="vibrator_intensity">Vibration</string>
-    <string name="vibrator_intensity_control">Intensity</string>
-    <string name="vibrator_intensity_summary">Allows user to change the vibration intensity</string>
-
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Default</string>
@@ -62,17 +57,5 @@
     <string name="game_mode_summary">Boost Touch Sampling Rate</string>
     <string name="game_mode_title">Game Mode</string>
     <string name="tile_game_mode">Game Mode</string>
-
-    <!-- Superdart Charging -->
-    <string name="super_dart_title">SuperDart Charging</string>
-    <string name="super_dart_summary">If enabled, device charges at a rate of 65W</string>
-    <string name="tile_super_dart">SuperDart</string>
-    <string name="power_title">Power</string>
-
-    <!-- Scrolling -->
-    <string name="smooth_scroll_title">Smooth Scrolling</string>
-    <string name="smooth_scroll_summary">Allow device to scroll smoothly</string>
-    <string name="sensitive_level_title">Sensitivity</string>
-    <string name="sensitive_level_summary">Improves touch sensitivity</string>
 
 </resources>
