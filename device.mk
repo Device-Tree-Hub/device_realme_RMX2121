@@ -143,6 +143,7 @@ PRODUCT_PACKAGES += \
 
 # RRO
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
     CutoutOverlaySystem \
     CutoutOverlaySystemUI \
     DozeOverlaySystem \
