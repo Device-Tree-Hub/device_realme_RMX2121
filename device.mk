@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Call proprietary blob setup
 $(call inherit-product-if-exists, vendor/realme/RMX2121/RMX2121-vendor.mk)
 
+# Include GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
