@@ -61,6 +61,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data 
+                android:name="com.android.settings.summary"
+                android:resource="@string/advanced_settings_summary" />
+
         </activity>
 
         <service
