@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_RMX2121.mk
+    $(LOCAL_DIR)/havoc_RMX2121.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_RMX2121-user \
-    aosp_RMX2121-userdebug \
-    aosp_RMX2121-eng
+    havoc_RMX2121-user \
+    havoc_RMX2121-userdebug \
+    havoc_RMX2121-eng
